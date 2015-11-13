@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <title>Biblioteka</title>
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quintessential&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<header class="cover-photo"></header>
+	<div class="main-wrap">
+
+		<div class="main-nav">
+			<ul>
+				<li id="dodaj"><a href="#">Dodaj knjigu</a></li>
+				<li id="pretrazi"><a href="#">Pretraži knjige</a></li>
+				<li id="izlistaj"><a href="#">Izlistaj sve knjige</a></li>
+				<li id="pomoc"><a href="#">Pomoć za pretragu</a></li>
+			</ul>
+		</div>
+		<div class="wrapper"><ol id="output" class="flex-container"></ol></div>
+		<div id="welcome">
+			<img src="img/header.jpg" width="600">
+				<h1 id="triangle-left">Dobrodošli</h1>
+				<p>Ovo je elektronska biblioteka koja služi da unesete sve knjige koje imate kod kuće, tako da se posle nekog vremena možete sa nekoliko klikova mišem, i malom pretragom potsetiti koje sve knjige imate na vašim policama. Kada pronađete knjigu u biblioteci, moći ćete da vidite osnovne informacije o njoj, ko je napisao knjigu, sliku omota... </p>
+				<p>Cilj je da se u narednom periodu unapredi biblioteka, tako da možete da pretražite knjige po više parametara: koje ste knjige pročitali koje niste, koje ste knjige pozajmili, da ocenite knjigu od 1 do 5 zvezdica...</p>
+				<p>Ukoliko imate i Vi neki predlog, kako bi mogla da se unapredi biblioteka, zaista bih voleo da čujem predloge, tako da možete da me kontaktirate putem <a href="mailto:dule.andrejevic@gmail.com">mejla</a>, ili na društvenim mrežama.</p>
+				<p>Veliki pozdrav! Dušan :)</p>
+		</div>
+		<div id="overlay">
+			<div>
+				<h1>Način pretrage</h1>
+				<ul>
+					<li>Pretražite knjige po imenu i prezimenu pisca, samo imenu, ili samo prezimenu.</li>
+					<li>Pretražite knjige po nazivu, ili jednoj od reči koja se nalazi u nazivu te knjige.</li>
+				</ul>
+			</div>
+		</div>
+		<div id="form-div">
+			<form id="form" action='index.html' method='post' autocomplete="off">
+				<h1>Nova knjiga</h1>
+				<fieldset>
+					<legend><span class='number'>1</span>Info</legend>
+
+					<label for='book'>Naziv knjige</label>
+					<input type='text' id='book' name='book_name'>
+					<span class="popup">Unesite naziv knjige</span>
+
+					<label for='writer'>Ime Pisca</label>
+					<input type='text' id='writer' name='writer_name'>
+					<span class="popup">Unesite ime pisca</span>
+				</fieldset>
+				<fieldset>
+					<legend><span class='number'>2</span>O knjizi</legend>
+
+					<label for='about'>Opis</label>
+					<textarea id='about' name='about_book'></textarea>
+
+					<input type='file' accept='image/*' id='picture' placeholder="Dodaj sliku">
+					<label for='picture'>Dodaj sliku</label>
+					
+				</fieldset>
+				<button type='button' id='snimi'>Snimi</button>
+				<button type='button' id='obrisi'>Obrisi</button>
+			</form>
+		</div>
+
+	</div>
+	<footer>Copyright &copy; Dusan | jun 2015.</footer>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/books.js"></script>
+	<script type="text/javascript" src="js/lockr.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
